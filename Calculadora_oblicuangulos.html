@@ -1,0 +1,444 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript" src="entidades.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trigonometría &mdash; Campo De Estudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+    <meta name="keywords"
+        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="gettemplates.co" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="index.html">Trigonometría.</a></div>
+                    </div>
+                    <div class="col-xs-8 text-center menu-1">
+                        <ul>
+                            <li class="active"><a href="index.html">INICIO</a></li>
+                            <li class="has-dropdown">
+                                <a href="#">TEORÍAS BASICAS</a>
+                                <ul class="dropdown">
+                                    <li><a href="1_basica.html">TRIGONOMETRÍA BÁSICA</a></li>
+                                    <li><a href="2_rectangulos.html">TRIÁNGULOS RECTANGULOS</a></li>
+                                    <li><a href="3_razones.html">RAZONES TRIGONOMÉTRICAS</a></li>
+                                    <li><a href="4_relaciones.html">RELACIONES TRIGONOMÉTRICAS</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#">HERRAMIENTAS DE CALCULO</a>
+                                <ul class="dropdown" style="width: 100%;">
+                                    <li><a href="Calculadora_teorema.html">TEOREMA DE PITAGORAS</a></li>
+                                    <li><a href="Calculadora_entidades.html">ENTIDADES TRIGONOMÉTRICAS</a></li>
+                                    <li><a href="Calculadora_oblicuangulos.html">TRIANGULOS OBLICUANGULOS</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#">EJERCICIOS RESUELTOS</a>
+                                <ul class="dropdown" style="width: 100%;">
+                                    <li><a href="Ejercicio_1.html">EJ: TRIGONOMETRÍA</a></li>
+                                    <li><a href="Ejercicio_2.html">EJ: SENO</a></li>
+                                    <li><a href="Ejercicio_3.html">EJ: COSENO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner"
+            style="background-image:url(images/img_bg_1.jpg);">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>TRIANGULOS OBLICUANGULOS</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-services">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="contenedor">
+                        <div class="contenedor_calculadora">
+                            <div class="row" style="text-align: center;">
+
+                                <h1 class="header_1">CALCULADORA DE TRIANGULOS OBLICUANGULOS</h1>
+
+                            </div>
+                            <div class="espacio"></div>
+                            <div class="full-w contenedor_simulador">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="simulador">
+                                            <canvas width="500" height="250" id="canvas_triangulo"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="datos">
+                                            <form class="formulario">
+                                                <p class="texto_centrado">
+                                                    <strong id="mensaje">Ingresa los datos del triángulo</strong>
+                                                </p>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="colordos">Lado 1 (A)</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="colordos">Angulo a</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="coloruno">Lado 2 (B)</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="coloruno">Angulo b</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="colortres">Lado 3 (C)</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input_texto a_half">
+                                                            <label class="colortres">Angulo c</label>
+                                                            <input autocomplete="off" type="text"
+                                                                class="inputs_formulario_1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <button type="button" onclick="resolver_triangulo();"
+                                                            class="boton_simulador btn btn-primary">Resolver
+                                                            Triangulo</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button type="button" onclick="limpiar()"
+                                                            class="boton_simulador esconder_elemento btn btn-primary">Nuevo
+                                                            Triangulo</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- countTo -->
+    <script src="js/jquery.countTo.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+
+</body>
+<script class="codigo_ variable" type="text/javascript">
+    ctx = document.getElementById("canvas_triangulo").getContext("2d");
+    inputs = document.getElementsByClassName("inputs_formulario_1");
+    botones = document.getElementsByClassName("boton_simulador");
+    mensaje = document.getElementById("mensaje");
+    contenedor_simulador = document.getElementsByClassName("contenedor_simulador")[0];
+    lado1 = 0;
+    angulo3 = 0;
+    lado2 = 0;
+    lado3 = 0.00;
+    angulo1 = 0.00;
+    angulo2 = 0.00;
+    escala = 0.00;
+    iniciando = true;
+    dl1 = false;
+    dl2 = false;
+    dl3 = false;
+    contador = 0;
+    contador2 = 0;
+    id = null;
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
+    arreglo_colores = ["#EA008E", "#007CDB", "#00D9C2"];
+    valido = false;
+    function limpiar() {
+        valido = false; lado1 = 0;
+        angulo3 = 0;
+        lado2 = 0;
+        lado3 = 0.00;
+        angulo1 = 0.00;
+        angulo2 = 0.00;
+        escala = 0.00;
+        iniciando = true;
+        dl1 = false;
+        dl2 = false;
+        dl3 = false;
+        contador = 0;
+        contador2 = 0;
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        clearInterval(id);
+        ctx.beginPath();
+        ctx.clearRect(0, 0, 500, 250);
+        botones[1].classList.add("esconder_elemento");
+        botones[0].classList.remove("esconder_elemento");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = "";
+        }
+    }
+    function resolver_triangulo() {
+        valido = comprobar_simulacion();
+        escala = 200 / (lado1 + lado2);
+        angulo3_converido = 90 - angulo3;
+        angulo3_converido = angulo3_converido * (Math.PI / 180);
+        xl2 = lado2 * Math.cos(angulo3_converido) * escala;
+        yl2 = lado2 * Math.sin(angulo3_converido) * escala;
+        lado3 = Math.pow(lado1, 2) + Math.pow(lado2, 2) - 2 * lado1 * lado2 * Math.cos(angulo3 * Math.PI / 180);
+        lado3 = parseFloat(Math.pow(lado3, 0.5));
+        if (inputs[1].value > 0) {
+            angulo1 = parseFloat(inputs[1].value);
+        }
+        else {
+            angulo1 = Math.asin(Math.sin(angulo3 * Math.PI / 180) * lado1 / lado3);
+            angulo1 = 180 * angulo1 / Math.PI;
+        }
+        angulo2 = Math.abs(angulo1 + angulo3 - 180);
+        if (valido) {
+            ctx.translate(250 - xl2 / 2, (125 - (lado1 * escala) / 2));
+            id = setInterval(dibujar_triangulo, 25);
+            botones[1].classList.remove("esconder_elemento");
+            botones[0].classList.add("esconder_elemento");
+            inputs[0].value = lado1.toFixed(2);
+            inputs[1].value = angulo1.toFixed(2);
+            inputs[2].value = lado2.toFixed(2);
+            inputs[3].value = angulo2.toFixed(2);
+            inputs[4].value = lado3.toFixed(2);
+            inputs[5].value = angulo3.toFixed(2);
+        }
+        else {
+            mensaje.innerHTML = "No hay suficientes datos";
+            mensaje.classList.add("mensaje_error");
+            setTimeout(function () {
+                mensaje.innerHTML = "Ingresa los datos del triángulo";
+                mensaje.classList.remove("mensaje_error");
+            }, 2000)
+        }
+    }
+    function comprobar_simulacion() {
+        if (inputs[0].value > 0 & inputs[2].value > 0 & inputs[5].value > 0) {
+            lado1 = parseFloat(inputs[0].value);
+            lado2 = parseFloat(inputs[2].value);
+            angulo3 = parseFloat(inputs[5].value);
+            return true;
+        }
+        else if (inputs[2].value > 0 & inputs[4].value > 0 & inputs[1].value > 0) {
+            lado2 = parseFloat(inputs[2].value);
+            lado3 = parseFloat(inputs[4].value);
+            angulo1 = parseFloat(inputs[1].value);
+            lado1 = Math.pow(Math.pow(lado2, 2) + Math.pow(lado3, 2) - 2 * lado2 * lado3 * Math.cos(angulo1 * Math.PI / 180), 1 / 2);
+            angulo3 = Math.asin((Math.sin(angulo1 * Math.PI / 180) * lado3) / lado1);
+            angulo3 = parseFloat((angulo3 * 180 / Math.PI).toFixed(2));
+            return true;
+        }
+        else if (inputs[0].value > 0 & inputs[3].value > 0 & inputs[4].value > 0) {
+            lado1 = parseFloat(inputs[0].value);
+            lado3 = parseFloat(inputs[4].value);
+            angulo2 = parseFloat(inputs[3].value);
+            lado2 = Math.pow(Math.pow(lado1, 2) + Math.pow(lado3, 2) - 2 * lado1 * lado3 * Math.cos(angulo2 * Math.PI / 180), 1 / 2);
+            angulo3 = Math.asin((Math.sin(angulo2 * Math.PI / 180) * lado3) / lado2);
+            angulo3 = angulo3 * 180 / Math.PI;
+            return true;
+        }
+        else if (inputs[0].value > 0 & inputs[2].value > 0 & inputs[4].value > 0) {
+            lado1 = parseFloat(inputs[0].value);
+            lado2 = parseFloat(inputs[2].value);
+            lado3 = parseFloat(inputs[4].value);
+            angulo3 = Math.acos((Math.pow(lado3, 2) - Math.pow(lado1, 2) - Math.pow(lado2, 2)) / (-2 * lado2 * lado1));
+            angulo3 = angulo3 * 180 / Math.PI;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function dibujar_triangulo() {
+        if (iniciando) {
+            ctx.moveTo(0, 0);
+            iniciando = false;
+            dl1 = true;
+            ctx.strokeStyle = arreglo_colores[0];
+        }
+        else if (dl1) {
+            ctx.lineTo(0, lado1 * escala * contador / 10);
+            contador++;
+            ctx.stroke();
+            if (contador == 11) {
+                dl1 = false;
+                dl2 = true;
+                contador = 0;
+                ctx.beginPath();
+                ctx.strokeStyle = arreglo_colores[2];
+            }
+        }
+        else if (dl2) {
+            ctx.lineTo(xl2 * contador / 10, yl2 * contador / 10);
+            contador++;
+            ctx.stroke();
+            if (contador == 11) {
+                dl2 = false;
+                dl3 = true;
+                contador = 0;
+                contador2 = 10;
+                ctx.beginPath();
+                ctx.strokeStyle = arreglo_colores[1];
+            }
+        }
+        else if (dl3) {
+            /*Gracias Dios*/
+            ctx.lineTo(xl2 - (xl2 * contador / 10), (lado1 * escala * contador / 10) + (yl2 * contador / -10) + yl2);
+            ctx.stroke();
+            contador++;
+            if (contador == 11) {
+                dl3 = false;
+            }
+        }
+        else {
+            clearInterval(id);
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+        }
+    }
+    function scroll_simulador() {
+        simulador_mp = document.getElementsByClassName('contenedor_simulador')[0];
+        posicion_contenido = simulador_mp.offsetTop;
+        console.log(posicion_contenido);
+        document.getElementsByClassName("contenido")[0].scrollTo(0, posicion_contenido - 100)
+        setTimeout(function () {
+            resolver_triangulo();
+        }, 1000)
+    }
+    function resolver_problema_1() {
+        limpiar();
+        inputs[0].value = 90;
+        inputs[2].value = 100;
+        inputs[4].value = 150;
+        scroll_simulador();
+    }
+    function resolver_problema_2() {
+        limpiar();
+        inputs[0].value = 90;
+        inputs[2].value = 50;
+        inputs[5].value = 25;
+        scroll_simulador();
+    }
+    function resolver_problema_3() {
+        limpiar();
+        inputs[4].value = 12.5;
+        inputs[2].value = 23.2;
+        inputs[1].value = 30;
+        scroll_simulador();
+    }
+
+
+
+    disparador_desplegable = document.getElementsByClassName("disparador_desplegable")[0];
+    contenido_desplegable = document.getElementsByClassName("contenido_desplegable")[0];
+    contenido_desplegado = false;
+    function mostrar_contenido_desplegable() {
+        if (!contenido_desplegado) {
+            disparador_desplegable.classList.add("disparador_desplegable_activo");
+            contenido_desplegable.classList.add("contenido_desplegable_activo");
+            contenido_desplegado = true;
+        }
+        else {
+            disparador_desplegable.classList.remove("disparador_desplegable_activo");
+            contenido_desplegable.classList.remove("contenido_desplegable_activo");
+            contenido_desplegado = false;
+        }
+    }
+</script>
+
+</html>

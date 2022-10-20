@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="xor1.js"></script>
+    <script type="text/javascript" src="script1.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <center>
+        <div class="dungi1">
+           
+        </div>
+
+        <div id="main-content" class="main">
+
+            <div id="calc-tool-row" style="max-width:500px !important;">
+
+                <div id="calc-tool-columns">
+
+
+                    <div id="calc-column" style="float: left; width: 100%;">
+                        <article id="mob-calc-page" data-role="page" data-theme="a">
+
+                            <form name="calc" id="calc" method="post" action="#">
+
+                                <div id="calc-table" class="clc-div">
+                                    <div class="clc-fld-div">
+
+                                    </div>
+                                    <table class="clc-tbl">
+                                        <tbody class="clc-tbl-bdy">
+                                            <div style="width:100px; margin-left:20px; margin-bottom:4px;">
+
+
+
+                                            </div>
+                                            <label style="display:none;" for="places">Numero de decimales</label>
+                                            <select style="display:none;" name="places" id="places" data-mini="true"
+                                                data-theme="c" onchange="change_places(this.form)"
+                                                data-precalc-fld="true">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3" selected="selected">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                            <center>
+                                                <div style="width:200px; margin-bottom:4px;">
+                                                    <label for="deg_rad">¿Radianes o grados?</label>
+                                                    <select name="deg_rad" id="deg_rad" data-mini="true" data-theme="c"
+                                                        onchange="change_deg_rad(this.form)" data-precalc-fld="true"
+                                                        class="custom-select">
+                                                        <option value="0" selected="selected">Grados</option>
+                                                        <option value="1">Radianes</option>
+                                                    </select>
+                                                </div>
+                                            </center>
+
+
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+
+                                                    <div class="clc-fld-div">
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+
+                                                    <div class="clc-fld-div-flex">
+                                                        <fieldset data-role="controlgroup" data-type="horizontal"
+                                                            data-mini="true" data-theme="c">
+                                                            <label for="sss">LLL</label>
+                                                            <input name="find" id="sss" value="0" checked="checked"
+                                                                onclick="change_find('sss')" data-precalc-fld="true"
+                                                                type="radio">
+                                                            <label for="sas">LAL</label>
+                                                            <input name="find" id="sas" value="1"
+                                                                onclick="change_find('sas')" data-precalc-fld="true"
+                                                                type="radio">
+                                                            <label for="ssa">LLA</label>
+                                                            <input name="find" id="ssa" value="2"
+                                                                onclick="change_find('ssa')" data-precalc-fld="true"
+                                                                type="radio">
+                                                            <label for="asa">ALA</label>
+                                                            <input name="find" id="asa" value="3"
+                                                                onclick="change_find('asa')" data-precalc-fld="true"
+                                                                type="radio">
+                                                            <label for="aas">AAL</label>
+                                                            <input name="find" id="aas" value="4"
+                                                                onclick="change_find('aas')" data-precalc-fld="true"
+                                                                type="radio">
+
+                                                        </fieldset>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="form_sss" style="display: table-row-group;">
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>a</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>a</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>a</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>a</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sss-a-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>a</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>a</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sss_a"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado a</label>
+                                                                            <input id="sss_a" name="sss_a"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="9"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sss_a','Longitud del lado a','#','2','0','200','1','tt-sss-a')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>b</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>b</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>b</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>b</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sss-b-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>b</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>b</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sss_b"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado b</label>
+                                                                            <input id="sss_b" name="sss_b"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="5"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sss_b','Longitud del lado b','#','2','0','200','1','tt-sss-b')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>c</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>c</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>c</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>c</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sss-c-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>c</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>c</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sss_c"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado c</label>
+                                                                            <input id="sss_c" name="sss_c"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="8"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sss_c','Longitud del lado c','#','2','0','200','1','tt-sss-c')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td-btn">
+                                                    <table style="border:none;margin:0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width:60%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT01"
+                                                                        onclick="calc_sss(this.form); mostrar();"
+                                                                        data-calc-btn-1="true">Resolver</button>
+                                                                </td>
+                                                                <td style="width:40%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT02"
+                                                                        onclick="reset_calc(this.form); ocultar()">Borrar</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="form_sas" style="display: none;">
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>c</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>c</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>c</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>c</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sas-c-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>c</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>c</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sas_c"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado c</label>
+                                                                            <input id="sas_c" name="sas_c"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="-8"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sas_c','Longitud del lado c','#','2','0','200','1','tt-sas-c')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>B</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>B</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sas-B-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>B</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce el ángulo del vértice <em>B</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sas_B"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                B</label>
+                                                                            <input id="sas_B" name="sas_B"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="20"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sas_B','Angulo B','degrees','2','0','200','1','tt-sas-B')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>a</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>a</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>a</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>a</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-sas-a-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>a</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>a</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="sas_a"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado a</label>
+                                                                            <input id="sas_a" name="sas_a"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="6"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('sas_a','Longitud del lado a','#','2','0','200','1','tt-sas-a')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td-btn">
+                                                    <table style="border:none;margin:0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width:60%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT01"
+                                                                        onclick="calc_sas(this.form); mostrar();"
+                                                                        data-calc-btn-1="true">Resolver</button>
+                                                                </td>
+                                                                <td style="width:40%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT02"
+                                                                        onclick="reset_calc(this.form); ocultar();">Borrar</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="form_ssa" style="display:none;">
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>a</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>a</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>a</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>a</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-ssa-a-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>a</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>a</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="ssa_a"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado a</label>
+                                                                            <input id="ssa_a" name="ssa_a"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('ssa_a','Longitud del lado a','#','2','0','200','1','tt-ssa-a')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>c</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>c</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>c</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>c</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-ssa-c-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>c</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>c</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="ssa_c"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado c</label>
+                                                                            <input id="ssa_c" name="ssa_c"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('ssa_c','Longitud del lado c','#','2','0','200','1','tt-ssa-c')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>A</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>A</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-ssa-A-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>A</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce el ángulo del vértice <em>A</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="ssa_A"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                A</label>
+                                                                            <input id="ssa_A" name="ssa_A"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('ssa_A','Angulo A','degrees','2','0','200','1','tt-ssa-A')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td-btn">
+                                                    <table style="border:none;margin:0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width:60%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT01"
+                                                                        onclick="calc_ssa(this.form); mostrar();"
+                                                                        data-calc-btn-1="true">Resolver</button>
+                                                                </td>
+                                                                <td style="width:40%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT02"
+                                                                        onclick="reset_calc(this.form); ocultar();">Borrar</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="form_asa" style="display:none;">
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>A</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>A</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-asa-A-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>A</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce el ángulo del vértice <em>A</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="asa_A"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                A</label>
+                                                                            <input id="asa_A" name="asa_A"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true"
+                                                                                value="29.999999999999996"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('asa_A','Angulo A','degrees','2','0','200','1','tt-asa-A')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>c</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>c</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>c</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>c</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-asa-c-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>c</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>c</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="asa_c"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado c</label>
+                                                                            <input id="asa_c" name="asa_c"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="2"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('asa_c','Longitud del lado c','#','2','0','200','1','tt-asa-c')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>B</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>B</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-asa-B-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>B</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Enter the angle of vertex <em>B</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="asa_B"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                B</label>
+                                                                            <input id="asa_B" name="asa_B"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" value="20"
+                                                                                type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('asa_B','Angulo B','degrees','2','0','200','1','tt-asa-B')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td-btn">
+                                                    <table style="border:none;margin:0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width:60%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT01"
+                                                                        onclick="calc_asa(this.form); mostrar();"
+                                                                        data-calc-btn-1="true">Resolver</button>
+                                                                </td>
+                                                                <td style="width:40%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT02"
+                                                                        onclick="reset_calc(this.form); ocultar()">Borrar</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody id="form_aas" style="display:none;">
+
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>A</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>A</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>A</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-aas-A-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>A</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce el ángulo del vértice <em>A</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="aas_A"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                A</label>
+                                                                            <input id="aas_A" name="aas_A"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('aas_A','Angulo A','degrees','2','0','200','1','tt-aas-A')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Angulo
+                                                            <em>B</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Angulo
+                                                            <em>B</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Angulo
+                                                            <em>B</em> <span class="deg_rad_txt">(grados)</span>:</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-aas-B-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Angulo <em>B</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce el ángulo del vértice <em>B</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="aas_B"
+                                                                                class="ui-hidden-accessible">Angulo
+                                                                                B</label>
+                                                                            <input id="aas_B" name="aas_B" class="BUT01"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="grados" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="BUT02"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('aas_B','Angulo B','degrees','2','0','200','1','tt-aas-B')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-even">
+                                                <td class="clc-td">
+
+                                                    <div class="clc-desc-div">
+                                                        <span class="fld-lbl-xsm" style="display: none;">Lado
+                                                            <em>a</em>:</span>
+                                                        <span class="fld-lbl-sm" style="display: none;">Lado
+                                                            <em>a</em></span>
+                                                        <span class="fld-lbl-md" style="display: inline;">Lado
+                                                            <em>a</em> :</span>
+                                                        <span class="fld-lbl-lg" style="display: none;">Lado <em>a</em>
+                                                            :</span>
+                                                        <div data-focu="calc-ttip-popup" id="tt-aas-a-popup"
+                                                            class="ui-content ttip tt-div" data-arrow="true"
+                                                            data-theme="a" data-overlay-theme="a">
+                                                            <h4>Lado <em>a</em> :</h4>
+                                                            <div class="tt-explain">
+                                                                <p>Introduce la longitud del lado <em>a</em>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clc-dbl-fld-div">
+                                                        <div class="clc-fld-div">
+                                                            <table class="input_tbl">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label for="aas_a"
+                                                                                class="ui-hidden-accessible">Longitud
+                                                                                del lado a</label>
+                                                                            <input id="aas_a" name="aas_a"
+                                                                                data-mini="true" data-theme="c"
+                                                                                data-inline="true"
+                                                                                data-prevent-focus-zoom="true"
+                                                                                placeholder="#" step="any"
+                                                                                onkeyup="clear_results(this.form)"
+                                                                                onchange="clear_results(this.form)"
+                                                                                data-precalc-fld="true" type="number">
+                                                                        </td>
+                                                                        <td class="fld-keypad-td"
+                                                                            style="display: none;">
+                                                                            <button type="button" data-focu="keypad-btn"
+                                                                                class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-btn-c"
+                                                                                onclick="open_keypad('aas_a','Longitud del lado a','#','2','0','200','1','tt-aas-a')"
+                                                                                tabindex="-1">No text</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="clc-row-odd">
+                                                <td class="clc-td-btn">
+                                                    <table style="border:none;margin:0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width:60%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT01" onclick="calc_aas(this.form);"
+                                                                        data-calc-btn-1="true">Resolver</button>
+                                                                </td>
+                                                                <td style="width:40%;border:0;padding:0;">
+                                                                    <button type="button" data-focu="calc-btn"
+                                                                        class="BUT02"
+                                                                        onclick="reset_calc(this.form); ocultar()">Borrar</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                        <tbody>
+                                            <tr class="clc-summary">
+                                                <td class="ui-body-c">
+
+                                                </td>
+                                            </tr>
+
+                                            <tr class="clc-row-odd">
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </form>
+
+
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </center>
+
+    <br>
+
+
+    </div>
+    </div>
+    <div class="elementor-element elementor-element-9f984e8 elementor-widget elementor-widget-html" data-id="9f984e8"
+        data-element_type="widget" data-widget_type="html.default">
+        <div class="elementor-widget-container">
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-e313fea elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="e313fea" data-element_type="section" id="res_01">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-186607e"
+                    data-id="186607e" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-324c140 elementor-widget elementor-widget-html"
+                                data-id="324c140" data-element_type="widget" data-widget_type="html.default">
+                                <div class="elementor-widget-container">
+                                    <style>
+                                        .cabecera {
+                                            height: 35px;
+                                            background-color: black;
+                                        }
+
+                                        .B3 {
+                                            border-radius: 0px;
+                                        }
+
+                                        #res_ {
+                                            display: none;
+                                        }
+                                    </style>
+                                    <div id="res_">
+                                        <div class="cabecera"><button type="button" data-focu="calc-btn"
+                                                class="BUT02 B3" onclick="ocultar()">x</button></div>
+                                        <table id="resultado1">
+                                            <tbody>
+                                                <tr id="clc-sum-row" class="clc-summary" style="display: none;">
+                                                    <td id="clc-sum-cell" class="ui-body-c" style="display: none;">
+                                                        <div id="sumTxt">
+
+                                                        </div>
+                                                        <div id="sumTbl"></div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="clc-summary">
+                                                    <td class="ui-body-c">
+                                                        <div style="text-align:center;">
+                                                            <canvas id="canvas1" width="280" height="280"
+                                                                style="display: block; float: left;">Lo siento, pero tu
+                                                                buscador no soporta canvas. Por favor actualiza el
+                                                                navegador a la última versión.</canvas>
+                                                        </div>
+                                                        <div style="text-align:center;">
+                                                            <canvas id="canvas2" width="280" height="280"
+                                                                style="display:none;float:right;"></canvas>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table id="resultado2" class="cht-tbl" style="display:none;">
+                                            <tbody>
+                                                <tr class="cht-row-head">
+                                                    <td class="cht-td-borders ctr bld sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">Triangulo</td>
+                                                    <td class="cht-td-borders ctr bld sol_1"
+                                                        style="font-size: 90%; width: 50%;">Solucion</td>
+                                                    <td class="cht-td-borders ctr bld sol_2" id="solution_2_txt"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Tipo de triangulo </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="triangle_class_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="triangle_class_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+
+
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Lado <em>A</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="side_a_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="side_a_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Lado <em>B</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="side_b_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="side_b_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Lado <em>C</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="side_c_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="side_c_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Angulo <em>A</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="angle_A_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="angle_A_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Angulo <em>B</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="angle_B_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="angle_B_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Angulo <em>C</em> </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="angle_C_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="angle_C_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Perimetro </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="perimeter_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="perimeter_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Semiperimetro del triangulo </span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="semi_perimeter_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="semi_perimeter_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Area</span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="area_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="area_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Radio del círculo inscrito</span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="inscribed_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="inscribed_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span> Radio del círculo circunscrito</span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="circumscribed_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="circumscribed_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Mediana <em>m<sub>a</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="median_a_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="median_a_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Mediana <em>m<sub>b</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="median_b_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="median_b_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Mediana <em>m<sub>c</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="median_c_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="median_c_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Altura <em>h<sub>a</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="height_a_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="height_a_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Altura <em>h<sub>b</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="height_b_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="height_b_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Altura <em>h<sub>c</sub></em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="height_c_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="height_c_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Coordenadas del vertice <em>A</em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="cood_A_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="cood_A_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Coordenadas del vertice <em>B</em></span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="cood_B_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="cood_B_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Coordenadas del vertice <em>C</em></span>
+
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="cood_C_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="cood_C_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-odd">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+
+                                                        <span>Coordenadas del centroide</span>
+
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="cood_centroid_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="cood_centroid_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                                <tr class="cht-row-even">
+                                                    <td class="cht-td-borders sol_lbl"
+                                                        style="font-size: 90%; width: 50%;">
+                                                        <span>Coordenadas del circumcentro</span>
+                                                    </td>
+                                                    <td class="cht-td-borders rgt sol_1" id="cood_circum_1"
+                                                        style="font-size: 90%; width: 50%;"></td>
+                                                    <td class="cht-td-borders rgt sol_2" id="cood_circum_2"
+                                                        style="width: 0px; padding: 0px; font-size: 90%;"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+</body>
+
+</html>
